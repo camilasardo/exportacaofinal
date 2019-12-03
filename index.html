@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>
+      Cálculo para Exportação de Açúcar
+    </title>
+    <link rel = "stylesheet" type="text/css" href="css/estilo.css">
+    <meta charset="utf8">
+  </head>
+  <body>
+    <h1>
+      Cálculo para Exportação de Açúcar
+    </h1>
+    <img src = "imagens/canavial.jpg" alt = "imagem de um canavial" />
+    <h3 id="tituloform">
+      Formulário para cálculo do valor da exportação
+     </h3>
+     <form id="frmTeste" name="frmTeste" onsubmit="calculaExport(); return false;">
+      <label for"nomeVendedor">
+        Nome do Vendedor
+      </label>
+    <input id="nomeVendedor" type="text">
+      </br>
+      <label for"nomeComprador">
+        Nome do Comprador
+      </label>
+    <input id="nomeComprador" type="text">
+    </br>  
+      <label for "valordoacucar">
+        Valor do Açúcar
+      </label>
+    <input id="valordoacucar" type="number">
+      </br>    
+      <label for"quantacucar">
+        Quantidade de Açúcar
+      </label>
+     <input id="quantacucar" type="number">
+      </br>      
+      <button type="submit" onclick="registrarVendedor();">
+        Calcular
+      </button>
+      <br />
+      <div id="resultado">
+        &nbsp;
+      </div>
+     </form>
+     <div id="caixaStatusTx1"></div>
+     <script src="javascript/calculo.js"></script>
+  </body>
+</html>
