@@ -29,4 +29,17 @@ function registrarVendedor() {
         })
 }
 
+function viewComprador() {
+    var status;
+    var campoComprador = document.getElementById("campoComprador");     
+    contrato.comprador()
+    .then( (resultado) => {
+        campoComprador.innerHTML = resultado;
+    })
+    .catch( (err) => {
+        console.error(err);
+        campoComprador.innerHTML = err;
+    });
+}
+
 
