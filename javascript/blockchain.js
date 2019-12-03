@@ -42,4 +42,16 @@ function viewComprador() {
     });
 }
 
+function viewVendedor() {
+    var status;
+    var campoVendedor = document.getElementById("campoVendedor");     
+    contrato.vendedor()
+    .then( (resultado) => {
+        campoVendedor.innerHTML = resultado;
+    })
+    .catch( (err) => {
+        console.error(err);
+        campoVendedor.innerHTML = err;
+    });
+}
 
