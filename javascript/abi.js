@@ -1,4 +1,19 @@
-abiContrato = [
+abiContrato = 	[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_valor",
+				"type": "uint256"
+			}
+		],
+		"name": "registrarValor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
 	{
 		"inputs": [
 			{
@@ -10,16 +25,6 @@ abiContrato = [
 				"internalType": "string",
 				"name": "nomeVendedor",
 				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "valorDoAcucar",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "quantDeAcucar",
-				"type": "uint256"
 			}
 		],
 		"payable": false,
@@ -59,11 +64,11 @@ abiContrato = [
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "valorAPagar",
+		"name": "resultado",
 		"outputs": [
 			{
 				"internalType": "uint256",
-				"name": "valorTotalAPagar",
+				"name": "",
 				"type": "uint256"
 			}
 		],
@@ -101,4 +106,10 @@ abiContrato = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]
+]		
+			
+			
+		
+		
+		
+		
