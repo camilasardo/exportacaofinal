@@ -25,8 +25,7 @@ function registrarResultado() {
             caixaStatusTx.innerHTML = "Transação enviada. Aguardando processamento...";
             transacao.wait()
             .then( (resultado) => {
-                buscaStatusContrato();
-                caixaStatusTx.innerHTML = "Transação realizada.";
+            caixaStatusTx.innerHTML = "Transação realizada.";
             })        
             .catch( (err) => {
                 console.error("registrarMudancaStatus - Aguardando tx ser minerada");
