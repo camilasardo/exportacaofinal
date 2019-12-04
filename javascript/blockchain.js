@@ -4,10 +4,22 @@ ethereum.enable();
 var signatario = provedor.getSigner();
 var contrato = new ethers.Contract(enderecoContrato, abiContrato, signatario);
 
-function registrarVendedor() {
-    var textoCampo = document.frmTeste.nomeVendedor.value;
+var resultadoParaRegistro;
+
+function calculaExport()
+{    
+    var form = document.frmTeste;
+    var valordoacucar = form.valordoacucar.value;
+    var quantacucar = form.quantacucar.value;
+    var divvalorPagar = document.getElementById("resultado");
+    var valorPagar = valordoacucar * quantacucar;
+    resultadoParaRegistro = valorPagar;
+    divvalorPagar.innerHTML = valorPagar;
+}
+
+function registrarResultado() {
     var caixaStatusTx = document.getElementById("caixaStatusTx1");
-        contrato.mudaStatusPagamento(textoCampo)
+        contrato.registrarValor(resultadoParaRegistro)
         .then( (transacao) => {
             console.log("registrarMudancaStatus - Transacao ", transacao);   
             caixaStatusTx.innerHTML = "Transação enviada. Aguardando processamento...";
